@@ -7,6 +7,7 @@ DATA:
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +17,44 @@ DATA:
 
    <title>Título</title>
 </head>
+
 <body>
 
-   <h1>Teste de fonte</h1>
+   <div class="container">
+      <header>
+         <h2>Piano Virtual</h2>
+         <div class="column volume-slider">
+            <span>Volume</span> <input type="range" name="" id="">
+         </div>
+         <div class="column keys-check">
+            <span>Teclas</span> <input type="checkbox" name="" id="">
+         </div>
+      </header>
+
+      <ul class="piano-keys">
+         <li class="keys white"><span>a</span></li>
+         <li class="keys black"><span>w</span></li>
+         <li class="keys white"><span>s</span></li>
+         <li class="keys black"><span>e</span></li>
+         <li class="keys white"><span>d</span></li>
+         <li class="keys black"><span>f</span></li>
+         <li class="keys white"><span>t</span></li>
+         <li class="keys black"><span>g</span></li>
+         <li class="keys white"><span>y</span></li>
+         <li class="keys black"><span>h</span></li>
+         <li class="keys white"><span>u</span></li>
+         <li class="keys black"><span>j</span></li>
+         <li class="keys white"><span>k</span></li>
+         <li class="keys black"><span>o</span></li>
+         <li class="keys white"><span>l</span></li>
+         <li class="keys black"><span>p</span></li>
+      </ul>
+   </div>
+
 
 
    <!-- Javascript-->
    <script defer src="./src/scripts/engine.js"></script>
 </body>
+
 </html>
