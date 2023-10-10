@@ -5,6 +5,7 @@ LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
 DATA: 
 */
 
+// Vetor com as teclas do teclado musical
 let mapedKeys = [
    'a', 'w', 's', 'e', 'd',
    'f', 't', 'g', 'y', 'h',
@@ -12,10 +13,20 @@ let mapedKeys = [
    'p', ';'
 ]
 
+// Cria o objeto Audio
 let audio = new Audio("./src/audios/a.wav")
 
 // Pega todas as teclas do HTML
 let teclas = document.querySelectorAll('.piano-keys .keys')
+
+// Pega a tecla do volume no HTML
+const volumePiano = document.querySelector('.volume-slider input')
+
+// Pega o checkbox do HTML
+const checkTeclas = document.querySelector('.keys-check input')
+
+// Pega todos os Span do HTML
+const spanTeclas = document.querySelectorAll('.piano-keys .keys span')
 
 
 // Evento de click
@@ -29,7 +40,6 @@ teclas.forEach((keys) => {
 // Função resonsável por tocar o som
 const tocarSom = (key) => {
    audio.src = `./src/audios/${key}.wav`
-   audio.volume = 0.9
    audio.play();
 }
 
@@ -53,3 +63,14 @@ document.addEventListener("keydown", (e) => {
 
 })
 
+// Altera o volume do som dinamicamente
+volumePiano.addEventListener('input', (e) => {
+   audio.volume = e.target.value
+})
+
+// Esconde ou mostra as teclas do teclado
+checkTeclas.addEventListener('click', () => {
+   spanTeclas.forEach((e) => {
+      e.classList.toggle('hide')
+   })
+})
