@@ -2,7 +2,7 @@
 DESENVOLVEDOR: Thales Cardoso
 GITHUB: https://github.com/thalesacardoso
 LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
-DATA: 
+DATA: 10/10/2023
 -->
 
 <!DOCTYPE html>
@@ -19,9 +19,8 @@ DATA:
 </head>
 
 <body>
-
    <div class="container">
-      <header>
+      <header> <!--  Início header -->
          <h2>Piano Virtual</h2>
          <div class="column volume-slider">
             <span>Volume</span> <input type="range" min="0" max="1" step="any" value="0.5">
@@ -29,9 +28,10 @@ DATA:
          <div class="column keys-check">
             <span>Teclas</span> <input type="checkbox" checked>
          </div>
-      </header>
+      </header><!--  Fim header -->
 
-      <ul class="piano-keys">
+
+      <ul class="piano-keys"><!--  Início Piano -->
          <li class="keys white" data-key="a"><span>a</span></li>
          <li class="keys black" data-key="w"><span>w</span></li>
          <li class="keys white" data-key="s"><span>s</span></li>
@@ -49,10 +49,8 @@ DATA:
          <li class="keys white" data-key="l"><span>l</span></li>
          <li class="keys black" data-key="p"><span>p</span></li>
          <li class="keys white" data-key=";"><span>;</span></li>
-      </ul>
+      </ul><!--  Fim Piano -->
    </div>
-
-
 
    <!-- Javascript-->
    <script defer src="./src/scripts/engine.js"></script>

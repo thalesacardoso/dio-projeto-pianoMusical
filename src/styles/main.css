@@ -2,7 +2,7 @@
 DESENVOLVEDOR: Thales Cardoso
 GITHUB: https://github.com/thalesacardoso
 LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
-DATA:  
+DATA: 10/10/2023
 */
 
 /* IMPORTA O RESET CSS */
@@ -10,6 +10,7 @@ DATA:
 
 /* IMPORTA A FONTE DO GOOGLE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
 * {
    font-size: 16px;
    font-family: 'Poppins', sans-serif;
@@ -104,8 +105,6 @@ header .column span {
    background: linear-gradient(#fff 96%, #eee 4%);
 }
 
-
-
 .piano-keys .black {
    width: 44px;
    height: 140px;
@@ -114,6 +113,18 @@ header .column span {
    border-radius: 0 0 5px 5px;
    background: linear-gradient(#222, #000);
    z-index: 2;
+}
+
+.piano-keys span {
+   width: 100%;
+   position: absolute;
+   bottom: 20px;
+   text-align: center;
+   font-size: 1.2rem;
+}
+
+.piano-keys .keys span.hide{
+   display: none;
 }
 
 /* ESTILO PARA QUANDO CLICAR */
@@ -127,7 +138,6 @@ header .column span {
    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
 }
 
-
 /* ESTILO PARA QUANDO TECLAR */
 .piano-keys .black.click {
    background: linear-gradient( #000 , #434343);
@@ -137,16 +147,4 @@ header .column span {
 .piano-keys .white.click {
    background: linear-gradient( #fff , #ccc);
    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
-}
-
-.piano-keys span {
-   width: 100%;
-   position: absolute;
-   bottom: 20px;
-   text-align: center;
-   font-size: 1.2rem;
-}
-
-.piano-keys .keys span.hide{
-   display: none;
 }
